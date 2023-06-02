@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Newsletter Signup Form
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution for the [Newsletter Signup Form with Success Message challenge](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv) on Frontend Mentor.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+- [Built With](#built-with)
+- [Features](#features)
+- [How to Use](#how-to-use)
+- [Backend Integration](#backend-integration)
+- [Acknowledgements](#acknowledgements)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The Newsletter Signup Form project is a frontend challenge that allows users to sign up for a newsletter by providing their email address. Upon successful submission, a success message is displayed.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Screenshot
 
-### `npm test`
+![Newsletter Signup Form Preview](./src/design/active-states.jpg)
+![Newsletter Signup Form Preview](./src/design/desktop-design.jpg)
+![Newsletter Signup Form Preview](./src/design/error-states.jpg)
+![Newsletter Signup Form Preview](./src/design/mobile-design.jpg)
+![Newsletter Signup Form Preview](./src/design/desktop-success-active.jpg)
+![Newsletter Signup Form Preview](./src/design/mobile-success.jpg)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Links
 
-### `npm run build`
+- [Live Demo](https://vaqueraoscar0.github.io/FrontendMentorIO-NewsletterForm)
+- [Frontend Mentor Solution Page](https://www.frontendmentor.io/solutions/newsletter-signup-form-react-google-sheets-api-I8-0yYAH0)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Built With
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project was built using the following technologies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React
+- HTML5
+- CSS3
+- Google Script
+- Google Sheet API
 
-### `npm run eject`
+## Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project includes the following features:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- User-friendly form with email validation
+- Success message display upon successful submission
+- Integration with Google Sheets API for storing email addresses
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## How to Use
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To use this project, follow these steps:
 
-## Learn More
+1. Clone or download the repository to your local machine.
+2. Navigate to the project directory and install the dependencies by running `npm install`.
+3. Start the development server by running `npm start`.
+4. Open the application in your browser at `http://localhost:3000`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Enter your email address in the provided field and click the submit button to sign up for the newsletter. If the submission is successful, a success message will be displayed.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Backend Integration
 
-### Code Splitting
+To store the email addresses, this project integrates with the Google Sheets API. Instead of creating a custom backend, Google Scripts are used to handle the POST request and save the email address directly to a Google Sheet.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The integration with Google Sheets API involves configuring credentials, setting up authorization, and making HTTP requests to interact with the Google Sheet. Refer to the [Google Sheets API documentation](https://developers.google.com/sheets/api) for more information on how to set up and use the API.
 
-### Analyzing the Bundle Size
+## Acknowledgements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Frontend Mentor](https://www.frontendmentor.io) for providing the challenge
+- [Google Sheets API](https://developers.google.com/sheets/api) for integrating with the backend
+- [AnatuGreen](https://developers.google.com/sheets/api) https://github.com/AnatuGreen/FormData-to-Google-Sheet

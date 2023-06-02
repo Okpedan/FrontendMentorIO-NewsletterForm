@@ -1,38 +1,474 @@
-.App {
-  text-align: center;
+/*@font-face {*/
+/*    font-family: Roboto-Bold, sans-serif;*/
+/*    src: url('./src/assets/fonts/Roboto-Bold.ttf');*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: Roboto-Regular, sans-serif;*/
+/*    src: url('./src/assets/fonts/Roboto-Regular.ttf');*/
+/*}*/
+
+html, #root, body, .App{
+    height: 100%;
+    background: hsl(235, 18%, 26%);
+    font-family: Roboto, serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.news{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 930px;
+    height: 640px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.2) 10px 30px 50px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.news-letter-form{
+    display: flex;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.news-info{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px 0 50px 50px;
+    margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.news-info h1{
+    font-size: 60px;
+    font-family: Roboto, serif;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 5px;
+}
+
+.news-info p{
+    font-size: 16px;
+    width: 400px;
+    margin-bottom: 0;
+}
+
+.info-bullet-points{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.bullet-points{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.bullet-points img{
+    margin-top: 15px;
+}
+
+.form{
+    width: 100%;
+}
+
+.email-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.email-group label{
+    font-size: 14px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.email-group input{
+    border: 1px solid grey;
+    width: 375px;
+    height: 55px;
+    border-radius: 10px;
+    text-indent: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 25px;
+    margin-left: 0;
+    margin-right: 0;
+    cursor: pointer;
+}
+
+.form button{
+    width: 380px;
+    height: 58px;
+    border-radius: 10px;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.error-tab{
+    display: flex;
+    justify-content: space-between;
+    width: 380px;
+}
+
+.error-tab p{
+    color: red;
+    font-size: 12px !important;
+    text-align: right;
+    margin-top: 0;
+}
+
+.error-tab label{
+    padding-bottom: 0;
+    font-size: 12px;
+}
+
+.form button:hover{
+    background: linear-gradient(to left, rgb(252, 107, 66), hsl(347, 100%, 68%));;
+    /*box-shadow: hsl(4, 100%, 67%) 0 50px 200px -8px;*/
+    box-shadow: hsl(4, 100%, 78%) 10px 3px 50px 0;
+}
+
+
+.news-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/*Email sent recipe*/
+.email-status{
+    display: flex;
+
+    width: 500px;
+    height: 530px;
+
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.2) 10px 30px 50px 0;
+}
+
+.email-info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 50px;
+    margin: 0;
+}
+
+.email-info h1{
+    font-family: Roboto, sans-serif;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.email-info p{
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    width: 380px;
+    line-height: 25px;
+    margin-bottom: 45px;
+}
+
+.email-info button{
+    width: 380px;
+    height: 58px;
+    border-radius: 10px;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.email-info button:hover{
+    background: linear-gradient(to left, rgb(252, 107, 66), hsl(347, 100%, 68%));;
+    /*box-shadow: hsl(4, 100%, 67%) 0 50px 200px -8px;*/
+    box-shadow: hsl(4, 100%, 78%) 10px 3px 50px 0;
+}
+
+
+@media (max-width: 950px){
+    .news{
+        width: 697px;
+        height: 480px;
+    }
+
+    .news-letter-form{
+        display: flex;
+    }
+
+    .news-info{
+        padding: 30px 15px 30px 30px;
+        margin: 0;
+    }
+
+    .news-info h1{
+        font-size: 40px;
+    }
+
+    .news-info p{
+        font-size: 14px;
+        width: 300px;
+    }
+
+    .email-group{
+        margin-bottom: 0;
+    }
+
+    .email-group input{
+        width: 300px;
+        height: 40px;
+    }
+
+    .form button{
+        width: 305px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .news-info p{
+        font-size: 14px;
+        width: 300px;
+    }
+
+    .info-bullet-points{
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .bullet-points{
+        padding-top: 10px;
+    }
+
+    .info-bullet-points p{
+        margin-top: 0;
+    }
+
+    .info-bullet-points img{
+        margin-top: 0;
+    }
+
+    .news-img{
+        width: 300px;
+        height: 440px;
+    }
+
+    .news-img img{
+        width: 300px;
+    }
+
+    .error-tab{
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+    }
+
+}
+
+
+@media (max-width: 700px){
+    .news{
+        width: 400px;
+        height: 800px;
+    }
+
+    .news-letter-form{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 100%;
+    }
+
+    .news-img{
+        align-items: flex-start;
+        width: 100%;
+        height: 310px;
+        overflow: hidden;
+    }
+
+    .news-img img{
+        width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .news-info{
+        padding: 0 0 20px 0;
+    }
+
+    .email-group input{
+        width: 300px;
+        height: 40px;
+    }
+
+    .news-info h1{
+        font-size: 40px;
+        width: 300px;
+    }
+
+    .news-info p{
+        margin-top: 5px;
+        font-size: 16px;
+        width: 300px;
+    }
+
+    .form input{
+        width: 325px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .form button{
+        width: 330px;
+        height: 55px;
+        font-size: 14px;
+    }
+
+
+    .info-bullet-points{
+        padding-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .error-tab{
+        display: flex;
+        justify-content: space-between;
+        width: 330px;
+    }
+
+    .error-tab p{
+        padding: 0;
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 450px) {
+    /*Email sent recipe*/
+    .email-status{
+        width: 100vw;
+        height: 100vh;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .email-info{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 0 10px 0 30px;
+        margin: 0;
+    }
+
+    .email-info h1{
+        width: 100%;
+        font-size-adjust: inherit;
+    }
+
+    .email-info p{
+        width: 100%;
+    }
+
+    .email-info button{
+        width: 100%;
+        height: 58px;
+    }
+
+    .error-tab{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .error-tab p{
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
+@media (max-width: 450px){
+    .news{
+        width: 100%;
+        height: 850px;
+        border-radius: 0;
+    }
+
+    .news-info{
+        padding: 0 40px 40px;
+    }
+
+    .email-group input{
+        width: 300px;
+        height: 40px;
+    }
+
+    .news-info h1{
+        font-size: 40px;
+        width: 100%;
+    }
+
+    .news-info p{
+        width: 100%;
+    }
+
+    .form input{
+        width: 99%;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .form button{
+        width: 100%;
+        height: 55px;
+        font-size: 14px;
+    }
+
+
+    .info-bullet-points{
+        padding-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .news-img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .email-info h1{
+        font-size: 40px;
+    }
+
+}
+
+
+@media (max-width: 300px){
+    .news-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
 }
